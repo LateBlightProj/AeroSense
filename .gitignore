@@ -4,3 +4,7 @@ dist/
 .env
 .env.*
 *.log
+__pycache__/
+*.pyc
+control/state/
+control/config.local.json

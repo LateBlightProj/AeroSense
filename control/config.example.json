@@ -1,0 +1,187 @@
+{
+  "server": {
+    "bind": "127.0.0.1",
+    "port": 8765,
+    "poll_seconds": 1,
+    "stale_seconds": 5,
+    "verify_seconds": 3,
+    "history_seconds": 5
+  },
+  "devices": {
+    "B05": {
+      "label": "B05 雾培单元",
+      "protocol": "modbus_tcp",
+      "host": "127.0.0.1",
+      "port": 502,
+      "unit_id": 1,
+      "timeout_seconds": 1.5,
+      "write_enabled": false,
+      "points": {
+        "air_temperature": {
+          "label": "环境温度",
+          "unit": "°C",
+          "bank": "input",
+          "address": 0,
+          "type": "int16",
+          "scale": 0.1
+        },
+        "relative_humidity": {
+          "label": "相对湿度",
+          "unit": "%",
+          "bank": "input",
+          "address": 1,
+          "scale": 0.1
+        },
+        "root_temperature": {
+          "label": "根区温度",
+          "unit": "°C",
+          "bank": "input",
+          "address": 2,
+          "type": "int16",
+          "scale": 0.1
+        },
+        "pressure": {
+          "label": "回路压力",
+          "unit": "bar",
+          "bank": "input",
+          "address": 3,
+          "scale": 0.01
+        },
+        "dissolved_oxygen": {
+          "label": "溶解氧",
+          "unit": "mg/L",
+          "bank": "input",
+          "address": 4,
+          "scale": 0.1
+        },
+        "ec": {
+          "label": "电导率",
+          "unit": "mS/cm",
+          "bank": "input",
+          "address": 5,
+          "scale": 0.01
+        },
+        "potassium": {
+          "label": "钾离子浓度",
+          "unit": "mg/L",
+          "bank": "input",
+          "address": 6
+        },
+        "tank_level": {
+          "label": "储液箱液位",
+          "unit": "%",
+          "bank": "input",
+          "address": 7,
+          "scale": 0.1
+        },
+        "fault_active": {
+          "label": "设备故障",
+          "bank": "discrete",
+          "address": 0
+        },
+        "root_target_temperature": {
+          "label": "根区目标温度",
+          "unit": "°C",
+          "bank": "holding",
+          "address": 100,
+          "type": "int16",
+          "scale": 0.1,
+          "writable": true,
+          "min": 10,
+          "max": 25,
+          "verify_tolerance": 0.01,
+          "interlocks": [
+            {
+              "point": "fault_active",
+              "equals": 0
+            }
+          ]
+        },
+        "electrostatic_voltage": {
+          "label": "静电工作电压",
+          "unit": "kV",
+          "bank": "holding",
+          "address": 101,
+          "scale": 0.01,
+          "writable": true,
+          "min": 0.1,
+          "max": 5,
+          "verify_tolerance": 0.001,
+          "interlocks": [
+            {
+              "point": "fault_active",
+              "equals": 0
+            },
+            {
+              "point": "tank_level",
+              "min": 15
+            }
+          ]
+        },
+        "spray_pulse_seconds": {
+          "label": "喷雾脉冲时间",
+          "unit": "s",
+          "bank": "holding",
+          "address": 102,
+          "scale": 0.1,
+          "writable": true,
+          "min": 1,
+          "max": 30,
+          "verify_tolerance": 0.01,
+          "interlocks": [
+            {
+              "point": "fault_active",
+              "equals": 0
+            },
+            {
+              "point": "tank_level",
+              "min": 15
+            }
+          ]
+        },
+        "cooling_enabled": {
+          "label": "冷却回路",
+          "bank": "coil",
+          "address": 0,
+          "writable": true,
+          "min": 0,
+          "max": 1,
+          "verify_tolerance": 0,
+          "interlocks": [
+            {
+              "point": "fault_active",
+              "equals": 0,
+              "when_value": 1
+            },
+            {
+              "point": "tank_level",
+              "min": 15,
+              "when_value": 1
+            }
+          ]
+        },
+        "oxygenation_enabled": {
+          "label": "氧合回路",
+          "bank": "coil",
+          "address": 1,
+          "writable": true,
+          "min": 0,
+          "max": 1,
+          "verify_tolerance": 0,
+          "interlocks": [
+            {
+              "point": "fault_active",
+              "equals": 0,
+              "when_value": 1
+            },
+            {
+              "point": "tank_level",
+              "min": 15,
+              "when_value": 1
+            }
+          ]
+        }
+      }
+    }
+  }
+}
