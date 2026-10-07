@@ -1,0 +1,33 @@
+name: Control verification
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'control/**'
+      - '.github/workflows/control-verification.yml'
+  pull_request:
+    paths:
+      - 'control/**'
+      - '.github/workflows/control-verification.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  protocol-and-control:
+    name: Protocol and control tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.13'
+      - name: Verify protocol and control logic
+        run: python -m control.tests.run_verification
