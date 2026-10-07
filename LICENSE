@@ -14,7 +14,7 @@ Copyright (c) 2026 Cloud Mist Factory Project Team. All rights reserved.
 除适用法律及GitHub服务条款已允许的行为外，未经云雾工厂项目团队事先书面授权，
 不得使用、运行或部署本系统及其代码、素材和模型，不得修改或据此开发衍生作品，
 不得复制、转载、发布、分发、出售或将其集成到其他项目中。
-上述要求适用于商业及非商业用途；署名、注明来源或提交申请均不等于取得授权。
+上述要求适用于商业及非商业用途。
 
 3. GitHub平台许可
 GitHub服务条款允许的查看、展示及通过Fork等平台功能制作副本，
@@ -24,7 +24,6 @@ GitHub服务条款允许的查看、展示及通过Fork等平台功能制作副�
 4. 授权申请
 请通过本仓库Issue联系云雾工厂项目团队，说明申请主体、使用目的、
 涉及内容、使用方式及期限。须取得团队明确书面授权后，按授权范围使用。
-提交申请或未收到回复不构成授权。
 
 5. 第三方内容
 第三方库、代码和资源遵循各自原有许可证，本条款不改变其许可。
@@ -43,7 +42,6 @@ Except as permitted by applicable law or GitHub's Terms of Service, no permissio
 is granted to run, deploy, use, modify, create derivative works from, reproduce,
 republish, distribute, sell or incorporate the team's code or assets without
 prior written permission from the Cloud Mist Factory Project Team.
-Attribution and submission of a permission request do not constitute permission.
 GitHub's platform viewing and forking rights remain governed by its Terms of Service.
 Third-party components retain their own licenses. Request written permission
 through this repository's Issues before undertaking activities requiring permission.

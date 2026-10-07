@@ -1,11 +1,11 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/images/AeroSense_首页浅色Logo_艺术字_v1.png">
-    <img src="assets/images/AeroSense_深色Logo_exec88eccbbe_ver8.7.9.png" alt="AeroSense" width="360">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/images/AeroSense_深色Logo_exec88eccbbe_ver8.7.9.png">
+    <img src="assets/branding/AeroSense_GitHub_light_v1.png" alt="AeroSense" width="360">
   </picture>
 </p>
 <p align="center"><strong>Digital Twin · Precision Cultivation · Autonomous Operations</strong></p>
-<p align="center">云雾工厂项目团队 · 团队自主设计 / AI协作构建</p>
+<p align="center">云雾工厂项目团队</p>
 
 # AeroSense
 
@@ -15,17 +15,16 @@ AeroSense连接雾培生产的每一个关键环节：从健康种源、环境�
 到品质校验、采收分选与批次交付。它以数字孪生呈现设备和作物状态，以本地计算支持分析，
 以AeroSense Autonomy组织运维任务，使数据、判断和执行在同一工作界面中衔接。
 
-本仓库呈现团队对生产流程、系统架构、交互逻辑与视觉语言的自主设计，
-以及团队与AI协作完成的代码实现和三维表现。当前源码版本为 **v5.18**。
+本仓库收录系统源码、三维模型和配套视觉资产，涵盖生产流程、系统架构、
+交互逻辑与视觉呈现。当前源码版本为 **v5.18**。
 
 ## 权利与授权
 
-**保留所有权利。公开展示不构成使用授权。**
+**保留所有权利。**
 
 授权范围涵盖团队自有的源码、界面设计、AeroSense与Autonomy标识、团队Logo、
 图像、材质贴图、三维模型、动画、音效和文档。无论整体使用还是单独提取，
 商业或非商业的运行、部署、修改、二次开发、复制、转载和分发，均须事先取得团队书面授权。
-署名、注明出处或提交申请，不代表已获得授权。
 
 完整条款见[LICENSE](LICENSE)。GitHub平台许可及适用法律允许的行为依各自规定，
 第三方组件遵循其原有许可证。
@@ -63,7 +62,7 @@ AeroSense连接雾培生产的每一个关键环节：从健康种源、环境�
 
 ## 已获授权人员的构建方式
 
-需Node.js 20或更高版本，依赖已锁定。
+需Node.js 20或更高版本。
 
 ```sh
 npm ci
