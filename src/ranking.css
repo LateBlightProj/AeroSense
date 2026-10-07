@@ -1,0 +1,72 @@
+/* Strictly extends the 11.7.2 dark workbench; no replacement visual system. */
+body.rank-mode .ranking-rail{display:flex;gap:12px;align-items:center;margin-left:14px;padding-left:14px;border-left:1px solid var(--line);font-size:12px;color:var(--text-2);white-space:nowrap}
+body.rank-mode .ranking-rail span{padding:5px 0;border-bottom:2px solid transparent}
+body.rank-mode .ranking-rail .current{color:var(--ok);border-color:var(--ok)}
+.ranking-toast[hidden]{display:none!important}
+.ranking-toast{position:fixed;z-index:100;bottom:30px;left:50%;transform:translateX(-50%);padding:13px 22px;background:var(--surface);color:var(--text);border:1px solid var(--line);font-size:17px;box-shadow:0 8px 28px #0005}
+body.rank-mode .ranking-result{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(230px,1fr);gap:28px;height:100%;align-items:center}
+body.rank-mode .ranking-result>img{width:100%;height:100%;max-height:440px;object-fit:contain}
+body.rank-mode .ranking-result aside{display:grid;gap:22px;padding:8px 0}
+body.rank-mode .ranking-result dl{margin:0;padding-bottom:16px;border-bottom:1px solid var(--line)}
+body.rank-mode .ranking-result dt{font-size:20px;color:var(--text-2);margin-bottom:8px}
+body.rank-mode .ranking-result dd{margin:0;font-size:29px;font-weight:650;color:var(--text)}
+body.rank-mode .ranking-result .positive dd{color:var(--ok)}
+body.rank-mode .ranking-result p{font-size:16px;color:var(--text-2);line-height:1.7;margin:0}
+body.rank-mode .rank-start-treatment{display:block;align-self:flex-end;flex:none;margin:0;padding:11px 20px;font:inherit;font-size:18px;color:var(--ok);border:1px solid var(--ok);background:transparent;cursor:pointer}
+body.rank-mode .rank-start-treatment:hover{background:color-mix(in srgb,var(--ok) 10%,transparent)}
+body.rank-mode #eventLayer[data-card-key="grading"] .postharvest-evidence{gap:clamp(10px,1.8vh,20px)}
+body.rank-mode #eventLayer[data-card-key="grading"] .sort-comparison{flex:1;min-height:0}
+body.rank-mode #eventLayer[data-card-key="grading"] .sort-comparison figure{display:flex;flex-direction:column;min-height:0}
+body.rank-mode #eventLayer[data-card-key="grading"] .sort-comparison canvas[data-sort-falsecolor]{height:0;flex:1;min-height:0;aspect-ratio:auto}
+body.rank-mode .rank-ready{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-content:center;padding:10px}
+body.rank-mode .rank-ready h3{font-size:28px;margin:0 0 12px;color:var(--text)}
+body.rank-mode .rank-ready p{font-size:18px;color:var(--text-2);line-height:1.7;margin:0}
+body.rank-mode .rank-ready b{color:var(--ok);font-weight:600}
+@media(max-width:1350px){body.rank-mode .ranking-rail{gap:7px;font-size:11px;margin-left:7px;padding-left:7px}}
+
+body.rank-mode .ranking-start{border:1px solid var(--line-strong);background:var(--surface);color:var(--text);font:inherit;font-size:22px;padding:14px 34px;cursor:pointer}
+body.rank-mode .ranking-start:disabled{color:var(--text-2);cursor:default}
+body.rank-mode .ranking-start:not(:disabled):hover{border-color:var(--ok)}
+body.rank-mode .rank-review{border-top:1px solid var(--line);padding-top:12px;display:grid;gap:12px;font-size:16px;line-height:1.5}
+body.rank-mode .rank-review label{display:grid;gap:5px;font-size:15px}
+body.rank-mode .rank-review select,body.rank-mode .rank-review input{width:100%;min-width:0;background:var(--surface);color:var(--text);border:1px solid var(--line);padding:8px;font:inherit;font-size:17px}
+body.rank-mode .rank-review p{margin:0}
+body.rank-mode .review-source,body.rank-mode .review-plan-comparison small{font-size:13px;color:var(--text-2)}
+body.rank-mode .review-comparison{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+body.rank-mode .review-comparison b{color:var(--ok);font-size:24px}
+body.rank-mode .review-inputs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+body.rank-mode .rank-review button{font:inherit;font-size:17px;padding:9px 12px;border:1px solid var(--line);background:transparent;color:var(--ok);cursor:pointer}
+body.rank-mode .operator-console-body{overflow:auto!important;min-height:0}
+
+body.rank-mode .operator-console-body [data-op]{background:var(--surface-2);border:1px solid var(--line-strong);color:var(--text);font:inherit}
+body.rank-mode .operator-console-body :is([data-op="electro-apply"],[data-op="heat-root"]){color:var(--ok);border-color:var(--ok)}
+
+
+/* Production actions replace dismiss controls only in alarm handling. */
+body.rank-mode #eventLayer[data-alarm-workflow] .sheet-head{grid-template-columns:minmax(0,1fr) auto;gap:18px}
+body.rank-mode #eventClose.process-action{width:auto;height:auto;min-height:38px;padding:8px 16px;color:var(--ok);border:1px solid var(--ok);font-size:18px;white-space:nowrap}
+body.rank-mode #eventClose.process-action:disabled{opacity:.45;cursor:default}
+body.rank-mode .startup-current.is-active{animation-duration:.108s}
+body.rank-mode .startup-current.is-leaving{animation-duration:.072s}
+/* Only the merged preparation card needs a wider results column. */
+#eventLayer.cards-reflow.rank-prep-summary .event-body{grid-template-columns:minmax(0,58fr) minmax(0,42fr)!important}
+#eventLayer.cards-reflow.rank-prep-summary .event-copy{padding:18px 22px!important}
+#eventLayer.cards-reflow.rank-prep-summary .facts>div{min-height:0!important;padding:10px 0!important;gap:12px}
+#eventLayer.cards-reflow.rank-prep-summary .facts b{font-size:clamp(18px,1.15vw,24px)!important;line-height:1.45}
+body.rank-mode:is([data-oxygen-state="rising"],[data-oxygen-state="complete"]) #doVal,
+body.rank-mode:is([data-oxygen-state="rising"],[data-oxygen-state="complete"]) .trend-panel[data-key="do"] .trend-head>span:not(.target){color:var(--ok)}
+
+/* Complete history is available without adding a new display step. */
+body.rank-mode .current-log .log-body:not(.is-expanded) tr:nth-child(n+4){display:table-row}
+body.rank-mode .current-log .log-body:not(.is-expanded) tr:nth-child(n+5){display:none}
+body.rank-mode .current-log .log-body.is-expanded{overflow:auto;overscroll-behavior:contain}
+body.rank-mode .section:has(.metric.is-active)>.section-head{border-bottom-color:var(--accent)}
+body.rank-mode .metric.is-active{border-bottom:1px solid var(--accent)}
+
+/* Keep projected process text inside the model viewport. */
+.rank-mode .b05-three-label.action-caption:not(.light-effect-caption){max-width:calc(100% - 32px);white-space:normal;text-align:center}
+
+/* Dedicated scan evidence column: no equipment sits behind the result card. */
+.rank-mode .live-scan-panel{right:1.5%;top:18%;width:31%;font-size:calc(14px * var(--scan-ui-size,1));padding:calc(12px * var(--scan-ui-size,1));gap:calc(9px * var(--scan-ui-size,1));line-height:1.4}
+.rank-mode .live-scan-panel b{font-size:calc(16px * var(--scan-ui-size,1))}
+.rank-mode .live-scan-panel .sort-legend{font-size:inherit}

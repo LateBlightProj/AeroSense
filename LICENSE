@@ -1,0 +1,49 @@
+AeroSense 源码公开与授权使用条款
+AeroSense Source Publication and Permission Terms
+
+Copyright (c) 2026 云雾工厂项目团队。保留所有权利。
+Copyright (c) 2026 Cloud Mist Factory Project Team. All rights reserved.
+
+1. 公开范围
+本仓库公开团队拥有权利的AeroSense源码与配套资产，供查看和了解系统设计。
+本条款覆盖团队自有的源码、界面设计、Logo与其他标识、图像、材质贴图、
+三维模型、动画、音效和文档。
+公开源码本身不授予运行、部署、修改、二次开发、使用或再分发的许可。
+
+2. 须事先取得书面授权的行为
+除适用法律及GitHub服务条款已允许的行为外，未经云雾工厂项目团队事先书面授权，
+不得使用、运行或部署本系统及其代码、素材和模型，不得修改或据此开发衍生作品，
+不得复制、转载、发布、分发、出售或将其集成到其他项目中。
+上述要求适用于商业及非商业用途；署名、注明来源或提交申请均不等于取得授权。
+
+3. GitHub平台许可
+GitHub服务条款允许的查看、展示及通过Fork等平台功能制作副本，
+由该服务条款约定。本条款不限制该等平台许可及法律不可排除的权利；
+平台许可不代表团队另行授予平台许可范围以外的使用或转载授权。
+
+4. 授权申请
+请通过本仓库Issue联系云雾工厂项目团队，说明申请主体、使用目的、
+涉及内容、使用方式及期限。须取得团队明确书面授权后，按授权范围使用。
+提交申请或未收到回复不构成授权。
+
+5. 第三方内容
+第三方库、代码和资源遵循各自原有许可证，本条款不改变其许可。
+相关许可见third-party目录与THIRD_PARTY_NOTICES.md。
+AeroSense及Autonomy标识、团队Logo、图像、三维模型、材质及动画均在上述授权范围内，
+即使脱离本系统单独使用、转载、编辑或分发，也须事先取得团队书面授权。
+
+6. 后续变更
+本次发布保留所有权利。后续若有新的授权声明，以团队对相应版本的明确发布为准。
+
+English notice
+This repository makes the team's AeroSense source code and assets available for viewing.
+These terms cover team-owned source code, interface designs, logos and marks,
+images, textures, 3D models, animations, sound effects and documentation.
+Except as permitted by applicable law or GitHub's Terms of Service, no permission
+is granted to run, deploy, use, modify, create derivative works from, reproduce,
+republish, distribute, sell or incorporate the team's code or assets without
+prior written permission from the Cloud Mist Factory Project Team.
+Attribution and submission of a permission request do not constitute permission.
+GitHub's platform viewing and forking rights remain governed by its Terms of Service.
+Third-party components retain their own licenses. Request written permission
+through this repository's Issues before undertaking activities requiring permission.

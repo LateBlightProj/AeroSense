@@ -1,0 +1,63 @@
+{
+  "asset": "aerosense_cabinet_optional_lamp.glb",
+  "root": "AeroSense_B05_Lamp_Static",
+  "attachTo": "B05-hardware",
+  "localTransform": {
+    "translation": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  "replaceOnly": [
+    "lamp-housing",
+    "lamp-cooling-fin",
+    "lamp-front-rim",
+    "lamp-hanger"
+  ],
+  "retain": [
+    "lamp-display-assembly parent identity at (0,2.4,0), rotation.x=-25 degrees",
+    "red-channel",
+    "blue-channel",
+    "far-red-channel",
+    "white-channel",
+    "uva-channel",
+    "ledMats",
+    "lamps",
+    "hardware.labels"
+  ],
+  "lampLocalBottom": -0.0175,
+  "ledLocalTop": -0.0215,
+  "lampPoseBakedInOwnGroup": true,
+  "doNotParentUnderOriginalLampGroup": true,
+  "triangles": 2008,
+  "sourceBoundsBlender": {
+    "min": [
+      -1.1200000047683716,
+      -0.32199999690055847,
+      2.321213960647583
+    ],
+    "max": [
+      1.1200000047683716,
+      0.32199999690055847,
+      2.561500072479248
+    ],
+    "size": [
+      2.240000009536743,
+      0.6439999938011169,
+      0.24028611183166504
+    ],
+    "all_values_finite": true
+  },
+  "note": "Optional second installation. Added transverse bridges lie at Y=2.55 inside existing top frame; exact original hanger endpoints are retained. No rig, clips, bulbs, emissive material or lights."
+}

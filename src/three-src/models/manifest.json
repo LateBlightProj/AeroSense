@@ -1,0 +1,85 @@
+{
+  "aerosense_clean_bench.glb": {
+    "bytes": 6298332,
+    "sha256": "30c7f0800680dceb216a856b1946dbdc7e9218f5a9b7ecb6de38ada61f219e9c",
+    "source": "aerosense_clean_bench_dark_v3.glb",
+    "revision": "3-darkscene-reviewed",
+    "status": "approved-local-candidate"
+  },
+  "aeroponic_potato.glb": {
+    "bytes": 5656880,
+    "sha256": "5656abba86c0ca61a85c642acfce307267324ec6476f518d738e37b54faa7537"
+  },
+  "aeroponic_potato_lod_medium.glb": {
+    "bytes": 1703664,
+    "sha256": "127594fea54bd6b7adad9d6b7a5e425e59456e04cc646d9ec6fb65ea425c387b"
+  },
+  "aeroponic_potato_lod_distant.glb": {
+    "bytes": 482660,
+    "sha256": "295790d50f4b5ab277f75046bc620108b615c8e672af8f99273b9049a90d1601"
+  },
+  "aerosense_spectral_scanner.glb": {
+    "bytes": 833056,
+    "sha256": "0bca873586455a567d33792d977ea62ad579c43230d419b7aa183bb250b85818"
+  },
+  "mist_module.glb": {
+    "bytes": 1963896,
+    "sha256": "565b62a748dfea7fbc4494db2cccc42d664c1307bd789fd869fa190e55d90987",
+    "source": "mist_module_dark_v3.glb",
+    "revision": "3-darkscene-reviewed",
+    "status": "approved-local-candidate"
+  },
+  "dryer_module.glb": {
+    "bytes": 1939580,
+    "sha256": "2565f09069dffdfcf6e5b28aa1afcb8e24616ca5b595914ba22e6b89dbd063f2",
+    "source": "dryer_module_silver_fan_v3_1.glb",
+    "revision": "3-darkscene-reviewed",
+    "status": "approved-local-candidate"
+  },
+  "aerosense_cabinet_static.glb": {
+    "bytes": 3423296,
+    "sha256": "5bfc33e4e3f360f9401ec38df5c72cc09fcc5284830569a1b1185a8814fec8a6",
+    "source": "aerosense_cabinet_darkscene_v3.glb",
+    "revision": "3-darkscene-reviewed",
+    "status": "approved-local-candidate"
+  },
+  "aerosense_cabinet_optional_lamp.glb": {
+    "bytes": 111700,
+    "sha256": "71b2981dd5fdc244a5835ea8eae2260c6fe0be1d4087d48587999694416e08bb"
+  },
+  "replacement_manifest.json": {
+    "bytes": 8999,
+    "sha256": "03f4f538e51307eba97be746d32efcc0baf9aaaedf4c4687237e77ae86a80329"
+  },
+  "optional_lamp_manifest.json": {
+    "bytes": 1381,
+    "sha256": "7a77c13ed391a41e80ff051b8b979bcdd9fa0587dadceb92a1f123e22b21c9c7"
+  },
+  "postprocess_mapping.json": {
+    "bytes": 4566,
+    "sha256": "c8eb95c31994261b176660ed7fcf83636dd138158f794f83524dd5139857e33e"
+  },
+  "aerosense_uvc_static_detail_dark_v1.glb": {
+    "bytes": 2195244,
+    "sha256": "ef0adf2796b07d431643a6728cb2258b5da5780167916ef93dc23c9774484954",
+    "source": "aerosense_uvc_darkscene_v3.glb",
+    "revision": "3-darkscene-reviewed",
+    "status": "approved-local-candidate"
+  },
+  "aerosense_stock_static_detail_dark_v1.glb": {
+    "bytes": 2543244,
+    "sha256": "ff5df0a73db8f16194b3c826ee7e7212b02ccc01ab84e464fa2f4f6f20d308a0",
+    "source": "aerosense_stock_darkscene_v3.glb",
+    "revision": "3-darkscene-reviewed",
+    "status": "approved-local-candidate"
+  },
+  "bench_camera_trajectory_6s.json": {
+    "bytes": 39571,
+    "sha256": "377c42dc68b8fc942a854756f989eee16de354e96387681d706b8e48092c5f4d",
+    "source": "bench_camera_trajectory_6s.json"
+  },
+  "aerosense_ise_calibration_v1.glb": {
+    "bytes": 955996,
+    "sha256": "33844b3a67916cf8374b9fdb9d0a622ad15e5c162d722d44f77fe7e5c1eeea02"
+  }
+}

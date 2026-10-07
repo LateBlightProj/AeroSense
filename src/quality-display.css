@@ -1,0 +1,52 @@
+/* Both cards keep the original full image and a readable instrument results column. */
+html body.rank-mode #eventLayer.cards-reflow[data-card-key]:is([data-card-key="spectral"],[data-card-key="aseptic"]).has-card-results:not(.single-composition) .event-body{grid-template-columns:minmax(0,1fr) 430px!important}
+html body.rank-mode #eventLayer.cards-reflow[data-card-key]:is([data-card-key="spectral"],[data-card-key="aseptic"]) .event-copy{padding:32px!important;justify-content:flex-start!important}
+html body.rank-mode #eventLayer.cards-reflow[data-card-key]:is([data-card-key="spectral"],[data-card-key="aseptic"]) .facts{height:100%;gap:0!important}
+html body.rank-mode #eventLayer.cards-reflow[data-card-key="spectral"] .spectral-evidence-model canvas{min-height:0}
+.spectral-results{display:flex;flex-direction:column;height:100%;gap:36px}
+.spectral-results h3,.particle-monitor h3{margin:0;font-size:26px;font-weight:600;line-height:1.3;color:var(--text)}
+.spectral-estimate{display:flex;flex-direction:column;gap:12px;padding:22px 0 32px;border-bottom:1px solid var(--line)}
+.spectral-estimate>span{color:var(--text-2);font-size:23px}
+.spectral-estimate strong{color:var(--ok);font:600 66px/1.2 var(--mono);white-space:nowrap;letter-spacing:-2px}
+.spectral-estimate strong small{font-size:32px;margin-left:8px;letter-spacing:0}
+.spectral-results dl{margin:0;display:grid;gap:30px}
+.spectral-results dl>div{display:grid;gap:8px}
+.spectral-results dt{color:var(--text-2);font-size:20px}
+.spectral-results dd{margin:0;color:var(--text);font-size:26px;line-height:1.3}
+.aseptic-station{position:relative;height:100%;width:100%;min-height:0}
+html body.rank-mode #eventLayer.cards-reflow[data-card-key="aseptic"] .aseptic-station>img{width:100%;height:100%;max-height:none;object-fit:contain;display:block}
+.aseptic-sample-point{position:absolute;left:43%;top:50%;display:none;align-items:center;gap:10px;color:var(--ok);font-size:18px;background:#090e0fba;padding:6px 10px;pointer-events:none}
+.aseptic-sample-point[data-aseptic-location="edge"]{left:68%;top:52%}
+.aseptic-sample-point.is-active{display:flex}
+.aseptic-sample-point i{position:relative;display:block;width:10px;height:10px;border:1px solid var(--ok);border-radius:50%}
+.aseptic-sample-point i::after{content:"";position:absolute;inset:-5px;border:1px solid var(--ok);border-radius:50%;animation:aseptic-sample 1s ease-out infinite}
+@keyframes aseptic-sample{from{transform:scale(.7);opacity:1}to{transform:scale(2);opacity:0}}
+.particle-monitor{display:flex;flex-direction:column;height:100%;gap:20px;color:var(--text)}
+.particle-monitor>header{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.particle-monitor>header>span{font-size:19px;font-family:var(--mono);color:var(--text-2);white-space:nowrap}
+.particle-acquisition{display:flex;justify-content:space-between;gap:8px;font-size:20px;color:var(--ok);line-height:1.4}
+.particle-acquisition>span:last-child{color:var(--text-2);font-family:var(--mono)}
+.particle-monitor svg{display:block;width:100%;height:auto;aspect-ratio:360/170;flex:0 0 auto}
+.particle-grid{fill:none;stroke:var(--line);stroke-width:1}
+.particle-signal{fill:none;stroke:var(--ok);stroke-width:1.8;stroke-linejoin:round}
+.particle-signal-label{fill:var(--text-2);font-size:17px}
+.particle-scan-line{stroke:var(--ok);stroke-width:1;opacity:.5}
+.particle-monitor progress{display:block;width:100%;height:2px;margin-top:-12px;border:0;background:var(--line);color:var(--ok);appearance:none;flex:0 0 auto}
+.particle-monitor progress::-webkit-progress-bar{background:var(--line)}
+.particle-monitor progress::-webkit-progress-value{background:var(--ok)}
+.particle-samples{display:grid;gap:14px}
+.particle-samples>div{display:grid;grid-template-columns:minmax(0,1fr) repeat(3,36px);gap:14px;align-items:center;font-size:20px;color:var(--text-2)}
+.particle-samples [data-particle-sample]{width:36px;height:32px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line);font:19px var(--mono);color:var(--text-3)}
+.particle-samples .is-current{color:var(--ok);border-color:var(--ok);background:#8fba9d12}
+.particle-samples .is-complete{color:var(--ok);border-color:transparent}
+.aseptic-checks{margin-top:auto;display:grid;gap:18px;padding-top:22px;border-top:1px solid var(--line)}
+.aseptic-checks>div{display:flex;justify-content:space-between;gap:20px;font-size:23px;line-height:1.4}
+.aseptic-checks>div>span{color:var(--text-2)}
+.aseptic-checks b{color:var(--text-2);font-weight:500}
+.particle-monitor[data-state="complete"] .aseptic-checks b{color:var(--ok)}
+@media(prefers-reduced-motion:reduce){.aseptic-sample-point i::after{animation:none}}
+
+.spectral-evidence-model{position:relative;display:grid;grid-template-rows:minmax(0,1fr) auto}
+.spectral-map-legend{display:flex;align-items:center;gap:18px;padding:15px 20px;color:var(--text-2);font-size:18px;border-top:1px solid var(--line)}
+.spectral-map-legend i{height:8px;width:clamp(120px,20vw,320px);background:linear-gradient(90deg,#193d94,#0bb0ad 33%,#d1e063 72%,#f77a30)}
+.spectral-map-legend>span:last-child{margin-left:auto}

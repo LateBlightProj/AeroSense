@@ -1,0 +1,200 @@
+{
+  "units": "metres",
+  "axes": {
+    "up": "+Y",
+    "front": "+Z",
+    "transport": "+X"
+  },
+  "parent_world_offset": [
+    2.43,
+    0.29,
+    0.28
+  ],
+  "root_origin": "chamber center; never recenter by whole-machine bbox",
+  "root_rotation": [
+    0,
+    0,
+    0
+  ],
+  "root_scale": [
+    1,
+    1,
+    1
+  ],
+  "retain_runtime_objects": [
+    "post-scan-treatment-line",
+    "treatment-conveyor",
+    "treatment-belt-mark",
+    "treatment-leg",
+    "treatment-foot",
+    "treatment-top-rail",
+    "treatment-bottom-rail",
+    "treatment-cross-brace",
+    "chamber-support-rail",
+    "chamber-support-crossbar",
+    "reservoir-liquid-surface",
+    "ultrasonic-fine-mist",
+    "transport-tuber-*",
+    "surface-water-*"
+  ],
+  "modules": {
+    "mist": {
+      "file": "mist/mist_module.glb",
+      "root_node": "AeroSense_MistModule",
+      "position_in_postharvest": [
+        1.69,
+        0.11,
+        -0.52
+      ],
+      "hide_all_legacy_matches": [
+        "ultrasonic-mist-roof",
+        "ultrasonic-mist-back",
+        "ultrasonic-mist-window",
+        "ultrasonic-mist-frame",
+        "ultrasonic-reservoir",
+        "reservoir-tray",
+        "ultrasonic-transducer",
+        "reservoir-duct-connector",
+        "mist-supply-duct",
+        "mist-top-duct",
+        "mist-distribution-slot"
+      ],
+      "door": {
+        "node": "Mist_Door_Pivot",
+        "axis": "Y",
+        "default_angle": 0
+      },
+      "window": "Mist_Observation_Window",
+      "labels": "Mist_Labels",
+      "anchors": {
+        "Mist_Anchor_BeltSurface": [
+          0,
+          -0.24699999392032623,
+          0
+        ],
+        "Mist_Anchor_Entry": [
+          -0.36500000953674316,
+          -0.24699999392032623,
+          0
+        ],
+        "Mist_Anchor_Exit": [
+          0.36500000953674316,
+          -0.24699999392032623,
+          0
+        ],
+        "Mist_Anchor_Distributor": [
+          0,
+          0.14499999582767487,
+          0
+        ],
+        "Mist_Anchor_Transducer": [
+          0,
+          -0.5839999914169312,
+          0
+        ],
+        "Mist_Anchor_Reservoir_Surface": [
+          0,
+          -0.4399999976158142,
+          0
+        ]
+      },
+      "bounds_local": {
+        "min": [
+          -0.36500000953674316,
+          -0.6835000072605908,
+          -0.3076011538505554
+        ],
+        "max": [
+          0.36500000953674316,
+          0.22499999403953552,
+          0.2580000087618828
+        ]
+      },
+      "sha256": "c7e99b2684229b35bc1c204967fcf81bdf435d5ea6ba964989a47f2f8a95fc34",
+      "triangles": 9892,
+      "materials": 6,
+      "mesh_primitives": 18
+    },
+    "dryer": {
+      "file": "dryer/dryer_module.glb",
+      "root_node": "AeroSense_ColdDryerModule",
+      "position_in_postharvest": [
+        2.53,
+        0.11,
+        -0.52
+      ],
+      "hide_all_legacy_matches": [
+        "cold-air-roof",
+        "cold-air-back",
+        "cold-air-window",
+        "cold-air-frame",
+        "cold-air-fan-housing",
+        "cold-air-filter",
+        "cold-air-duct",
+        "cold-air-knife",
+        "cold-air-fan-guard",
+        "cold-air-impeller"
+      ],
+      "door": {
+        "node": "Dryer_Door_Pivot",
+        "axis": "Y",
+        "default_angle": 0
+      },
+      "window": "Dryer_Observation_Window",
+      "labels": "Dryer_Labels",
+      "anchors": {
+        "Dryer_Anchor_BeltSurface": [
+          0,
+          -0.24699999392032623,
+          0
+        ],
+        "Dryer_Anchor_Entry": [
+          -0.36500000953674316,
+          -0.24699999392032623,
+          0
+        ],
+        "Dryer_Anchor_Exit": [
+          0.36500000953674316,
+          -0.24699999392032623,
+          0
+        ],
+        "Dryer_Anchor_FanAxis": [
+          0,
+          0.3799999952316284,
+          0.125
+        ],
+        "Dryer_Anchor_AirKnife": [
+          0,
+          0.125,
+          0
+        ]
+      },
+      "bounds_local": {
+        "min": [
+          -0.36500000953674316,
+          -0.2279999693056482,
+          -0.2615000131638262
+        ],
+        "max": [
+          0.36500000953674316,
+          0.4950000047683716,
+          0.2580000087618828
+        ]
+      },
+      "sha256": "f8f9df146552ed1d898d0c60b8742ccee70e28cfaf262790be52511ca5a99274",
+      "triangles": 8276,
+      "materials": 5,
+      "mesh_primitives": 11,
+      "fan": {
+        "node": "Dryer_Fan_Pivot",
+        "axis": "Z",
+        "center": [
+          0,
+          0.38,
+          0.125
+        ],
+        "drive": "use existing cold-air-impeller rotation.z from update(event,t); no new timing"
+      }
+    }
+  }
+}

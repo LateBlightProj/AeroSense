@@ -1,0 +1,15 @@
+:root{--autonomy-font:"Bahnschrift","DIN Alternate","Arial Narrow",var(--sans);--autonomy-ink:#3e494c}
+html[data-theme="dark"]{--autonomy-ink:#d0d7d8}
+body.rank-mode .aom-status{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;color:var(--autonomy-ink);font-family:var(--autonomy-font);font-size:17px;font-weight:500;letter-spacing:.025em;line-height:1.1;justify-self:end}
+body.rank-mode .model-workbench .wb-assistant h3{font-family:var(--autonomy-font);font-size:22px;font-weight:500;letter-spacing:.025em;line-height:1.2;color:var(--autonomy-ink)}
+body.rank-mode #eventLayer[data-card-key="ai-ops"] #eventTitle{font-family:var(--autonomy-font);font-weight:500;letter-spacing:.015em;color:var(--autonomy-ink)}
+body.rank-mode .aom-status[hidden]{display:none!important}
+body.rank-mode .aom-status canvas{display:block;width:42px;height:42px;pointer-events:none;user-select:none}
+body.rank-mode .system:has(.aom-status:not([hidden])){grid-template-columns:minmax(0,1fr) auto auto!important}
+body.rank-mode .top:has(.aom-status:not([hidden])){grid-template-columns:190px minmax(0,1fr) 352px!important}
+body.rank-mode .takeover-autonomy-mark{display:block;width:68px;height:68px;flex:0 0 68px;pointer-events:none}
+body.rank-mode .aom-brand-lockup{position:relative;display:block;width:max-content;max-width:calc(100vw - 48px);margin-inline:auto}
+body.rank-mode .aom-brand-mark{position:absolute;left:0;top:0;transform:translate(-60%,-30%);display:block;width:clamp(48px,4vw,72px);height:clamp(48px,4vw,72px);pointer-events:none;user-select:none}
+body.rank-mode .aom-brand-lockup .standby-logo-frame,body.rank-mode .aom-brand-lockup .boot-logo-frame{max-width:calc(100vw - 206px);flex:none}
+body.rank-mode:not(.model-workbench-open) #globalAlarm strong{top:var(--aom-alarm-top,76px);right:var(--aom-alarm-right,24px)}
+@media(max-width:720px){body.rank-mode .aom-brand-mark{width:32px;height:32px}body.rank-mode .aom-brand-lockup .standby-logo-frame,body.rank-mode .aom-brand-lockup .boot-logo-frame{max-width:calc(100vw - 126px)}}

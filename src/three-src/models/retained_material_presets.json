@@ -1,0 +1,197 @@
+{
+  "status": "Reviewable integration proposal only; NOT automatically applied and NOT part of static-detail GLB renders",
+  "source": "Read-only c134 hardware/fluid/cloud-models source packet",
+  "objects": [
+    {
+      "name": "uv-c-reactor",
+      "position": [
+        0.4,
+        -0.1,
+        0.12
+      ],
+      "linearRGB": [
+        0.3,
+        0.37,
+        0.4
+      ],
+      "metalness": 0.7,
+      "roughness": 0.36,
+      "materialHandling": "Modify the existing unique uvShell material in place; preserve object identity and every dynamic property"
+    },
+    {
+      "name": "stock-A",
+      "position": [
+        0.03,
+        -0.4,
+        0.25
+      ],
+      "linearRGB": [
+        0.022,
+        0.041,
+        0.031
+      ],
+      "metalness": 0,
+      "roughness": 0.64,
+      "materialHandling": "Isolate a material instance on only this exact retained Mesh to avoid recoloring shared tank panels; keep Mesh/geometry/position unchanged"
+    },
+    {
+      "name": "stock-B",
+      "position": [
+        0.23,
+        -0.4,
+        0.25
+      ],
+      "linearRGB": [
+        0.022,
+        0.041,
+        0.031
+      ],
+      "metalness": 0,
+      "roughness": 0.64,
+      "materialHandling": "Isolate a material instance on only this exact retained Mesh to avoid recoloring shared tank panels; keep Mesh/geometry/position unchanged"
+    },
+    {
+      "name": "stock-C",
+      "position": [
+        0.43000000000000005,
+        -0.4,
+        0.25
+      ],
+      "linearRGB": [
+        0.022,
+        0.041,
+        0.031
+      ],
+      "metalness": 0,
+      "roughness": 0.64,
+      "materialHandling": "Isolate a material instance on only this exact retained Mesh to avoid recoloring shared tank panels; keep Mesh/geometry/position unchanged"
+    },
+    {
+      "name": "stock-D",
+      "position": [
+        0.6300000000000001,
+        -0.4,
+        0.25
+      ],
+      "linearRGB": [
+        0.022,
+        0.041,
+        0.031
+      ],
+      "metalness": 0,
+      "roughness": 0.64,
+      "materialHandling": "Isolate a material instance on only this exact retained Mesh to avoid recoloring shared tank panels; keep Mesh/geometry/position unchanged"
+    },
+    {
+      "name": "stock-E",
+      "position": [
+        0.8300000000000001,
+        -0.4,
+        0.25
+      ],
+      "linearRGB": [
+        0.022,
+        0.041,
+        0.031
+      ],
+      "metalness": 0,
+      "roughness": 0.64,
+      "materialHandling": "Isolate a material instance on only this exact retained Mesh to avoid recoloring shared tank panels; keep Mesh/geometry/position unchanged"
+    },
+    {
+      "name": "stock-cap",
+      "position": [
+        0.03,
+        -0.255,
+        0.25
+      ],
+      "linearRGB": [
+        0.3,
+        0.37,
+        0.4
+      ],
+      "metalness": 0.72,
+      "roughness": 0.36,
+      "materialHandling": "Isolate a material instance on only this exact retained Mesh; the original shared metal also belongs to unrelated fluid fittings"
+    },
+    {
+      "name": "stock-cap",
+      "position": [
+        0.23,
+        -0.255,
+        0.25
+      ],
+      "linearRGB": [
+        0.3,
+        0.37,
+        0.4
+      ],
+      "metalness": 0.72,
+      "roughness": 0.36,
+      "materialHandling": "Isolate a material instance on only this exact retained Mesh; the original shared metal also belongs to unrelated fluid fittings"
+    },
+    {
+      "name": "stock-cap",
+      "position": [
+        0.43000000000000005,
+        -0.255,
+        0.25
+      ],
+      "linearRGB": [
+        0.3,
+        0.37,
+        0.4
+      ],
+      "metalness": 0.72,
+      "roughness": 0.36,
+      "materialHandling": "Isolate a material instance on only this exact retained Mesh; the original shared metal also belongs to unrelated fluid fittings"
+    },
+    {
+      "name": "stock-cap",
+      "position": [
+        0.6300000000000001,
+        -0.255,
+        0.25
+      ],
+      "linearRGB": [
+        0.3,
+        0.37,
+        0.4
+      ],
+      "metalness": 0.72,
+      "roughness": 0.36,
+      "materialHandling": "Isolate a material instance on only this exact retained Mesh; the original shared metal also belongs to unrelated fluid fittings"
+    },
+    {
+      "name": "stock-cap",
+      "position": [
+        0.8300000000000001,
+        -0.255,
+        0.25
+      ],
+      "linearRGB": [
+        0.3,
+        0.37,
+        0.4
+      ],
+      "metalness": 0.72,
+      "roughness": 0.36,
+      "materialHandling": "Isolate a material instance on only this exact retained Mesh; the original shared metal also belongs to unrelated fluid fittings"
+    }
+  ],
+  "preserve": [
+    "all Mesh and geometry identities",
+    "UV material identity",
+    "opacity",
+    "transparent",
+    "depthWrite",
+    "emissive and emissiveIntensity",
+    "all labels/status/halo materials",
+    "all pipes, flow markers, anchors, animations and event gates"
+  ],
+  "notes": [
+    "The current static GLBs cannot change retained original main cylinders or stock bodies.",
+    "Do not mutate shared stock/cap materials globally.",
+    "No application or user-computer changes were performed."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "aerosense-source",
+  "version": "5.18.0",
+  "private": true,
+  "type": "module",
+  "description": "AeroSense source publication. Written permission required for use and redistribution.",
+  "license": "SEE LICENSE IN LICENSE",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node src/build.mjs",
+    "check": "node tools/check-source.mjs"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12",
+    "typescript": "5.9.2"
+  }
+}

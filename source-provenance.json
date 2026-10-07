@@ -1,0 +1,38 @@
+{
+  "systemVersion": "5.18",
+  "sourcePublicationRevision": 2,
+  "team": "云雾工厂项目团队",
+  "productionFileSha256": "b9c783a78010c641d07c75e481466de42fb930525b0619f7546951fa74d8e8fd",
+  "templateSha256": "b0b723bd42ac894842aeddb742121b0516593e2d96c9fd87aaef598a95be26c5",
+  "sourceBasis": "AeroSense v5.18",
+  "publicationAdjustments": [
+    "本机绝对路径改为仓库内相对路径",
+    "保留依赖版本和第三方许可",
+    "四岗位照片与一张含人员的扫描照片改为公开版占位图",
+    "保留基础模板，三维运行包由当前三维源码重新构建"
+  ],
+  "runtimeFilesUnchangedExceptPortableImports": true,
+  "importedAssets": [
+    {
+      "asset": "cloth_normal.png",
+      "sha256": "c4f0252c2f01ba770c73fb90e98b0189957e6626ebc1401d6871380dcd5815a8"
+    },
+    {
+      "asset": "deck_normal.png",
+      "sha256": "dfd2b7e89d78f859c0f782b2262bf671d82f9e01a0149c9c341b975afe4c54ab"
+    },
+    {
+      "asset": "frame_normal.png",
+      "sha256": "404469b84ca3df697e283180c9eb1fe0bce8dc244ef2118da1862267bb4f4c54"
+    },
+    {
+      "asset": "potato01-web.glb",
+      "sha256": "e61248c7974af0673ccd2c3a076b6692c58d9cced88f554f018db55e3a49bad9"
+    },
+    {
+      "asset": "potato02-web.glb",
+      "sha256": "298da04bc42672ca4268e23765334d111d3cacb802b4a4cb4c8bb850fb5dc5aa"
+    }
+  ],
+  "candidateSystemSha256": "9dbad2893d163df074e82365241260271eff4c437dbebd057ec0a2c996b9aaae"
+}
