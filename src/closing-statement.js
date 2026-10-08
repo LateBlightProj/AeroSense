@@ -20,7 +20,7 @@
   </div>
   <footer class="rank-authorship-foot">
    <div>云雾工厂项目团队</div>
-   <a class="rank-authorship-source" href="https://github.com/Yinsfleur/AeroSense" target="_blank" rel="noopener noreferrer">github.com/Yinsfleur/AeroSense</a>
+   <a class="rank-authorship-source" href="https://github.com/LateBlightProj/AeroSense" target="_blank" rel="noopener noreferrer">github.com/LateBlightProj/AeroSense</a>
    <div class="rank-authorship-rights">源码、Logo、图像与三维模型 · 使用及转载须授权</div>
   </footer>
  </div>`;

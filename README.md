@@ -20,11 +20,11 @@ AeroSense Autonomy组织分析与运维任务，设备控制服务负责采集�
 
 ## 工程验证
 
-[![Control verification](https://github.com/Yinsfleur/AeroSense/actions/workflows/control-verification.yml/badge.svg?branch=main)](https://github.com/Yinsfleur/AeroSense/actions/workflows/control-verification.yml)
+[![Control verification](https://github.com/LateBlightProj/AeroSense/actions/workflows/control-verification.yml/badge.svg?branch=main)](https://github.com/LateBlightProj/AeroSense/actions/workflows/control-verification.yml)
 
 GitHub Actions执行设备协议与控制逻辑测试，每次运行关联源码提交，保留逐项结果与运行日志。
 测试覆盖Modbus TCP通信、参数写入与读回、联锁、断连与超时、指令去重、记录与恢复。
-测试环境与范围见[Control模块说明](control/README.md)，运行记录见[工程验证](https://github.com/Yinsfleur/AeroSense/actions/workflows/control-verification.yml)。
+测试环境与范围见[Control模块说明](control/README.md)，运行记录见[工程验证](https://github.com/LateBlightProj/AeroSense/actions/workflows/control-verification.yml)。
 
 ## 权利与授权
 
