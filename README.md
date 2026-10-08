@@ -7,7 +7,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/branding/Autonomy_motion_v6_dark.gif">
-    <img src="assets/branding/Autonomy_motion_v6.gif" alt="AeroSense Autonomy" width="280" height="80">
+    <img src="assets/branding/Autonomy_motion_v6_light.gif" alt="AeroSense Autonomy" width="280" height="80">
   </picture>
 </p>
 <p align="center"><strong>Digital Twin · Precision Cultivation · Autonomous Operations</strong></p>
