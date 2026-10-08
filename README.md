@@ -4,6 +4,7 @@
     <img src="assets/branding/AeroSense_GitHub_light_v1.png" alt="AeroSense" width="360">
   </picture>
 </p>
+<p align="center"><img src="assets/branding/Autonomy_motion_v6.gif" alt="AeroSense Autonomy" width="280" height="80"></p>
 <p align="center"><strong>Digital Twin · Precision Cultivation · Autonomous Operations</strong></p>
 <p align="center">云雾工厂项目团队</p>
 
