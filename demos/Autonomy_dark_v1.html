@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AeroSense Autonomy · 暗色 HTML演示</title><style>:root{color-scheme:dark;--paper:#0a0e0f;--ink:#e1e5df;--muted:#a5b1ab;--line:#29312f;--jade:#9ebaab;font-family:"Bahnschrift","DIN Alternate",Arial,"Microsoft YaHei",sans-serif;background:var(--paper);color:var(--ink)}
+*{box-sizing:border-box}body{margin:0}button{font:inherit}main{max-width:1280px;margin:auto;padding:0 52px}header{display:flex;align-items:center;justify-content:space-between;min-height:90px;border-bottom:1px solid var(--line)}.brand{font-size:26px;font-weight:600;letter-spacing:-.025em}.edition{font-size:14px;color:var(--muted)}.stage{min-height:480px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:34px 0 28px}.large-mark{width:240px;height:240px}.name{font-size:44px;line-height:1.1;letter-spacing:-.025em;font-weight:500;margin:8px 0 30px}.controls{display:flex;gap:6px;padding:4px;border:1px solid var(--line);border-radius:8px}.controls button{border:0;background:transparent;padding:10px 22px;min-height:42px;border-radius:4px;color:var(--muted);font-size:15px;cursor:pointer}.controls button[aria-pressed=true]{color:var(--ink);background:var(--selected)}.controls button:hover{color:var(--ink)}button:focus-visible{outline:2px solid #a9c8b6;outline-offset:4px}.applications{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.application{min-height:140px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}.application+.application{border-left:1px solid var(--line)}.label{color:var(--muted);font-size:13px}.lockup{display:flex;align-items:center;gap:9px}.lockup span{font-size:17px;font-weight:500;color:var(--ink)}.small-mark{width:42px;height:42px}.cover-mark{width:52px;height:52px}.cover-type{font-size:30px!important;letter-spacing:-.025em;color:var(--ink)!important}.analysis-mark{width:62px;height:62px}.application-analysis .lockup{gap:12px}.application-analysis span{font-size:20px}.footer{display:flex;justify-content:space-between;align-items:center;min-height:72px;gap:20px;color:var(--muted);font-size:13px}.swatches{display:flex;gap:7px}.swatches i{display:block;width:17px;height:17px;border-radius:50%;background:var(--swatch)}.footer a{color:var(--muted);text-underline-offset:4px}.pause{background:none;border:0;padding:10px 0;color:var(--muted);cursor:pointer}.pause:hover{color:var(--ink)}
+@media(max-width:700px){main{padding:0 22px}header{min-height:72px}.brand{font-size:23px}.edition{font-size:12px}.stage{min-height:405px}.large-mark{width:204px;height:204px}.name{font-size:36px}.applications{grid-template-columns:1fr}.application{min-height:109px;flex-direction:row;justify-content:space-between;padding:0 10px;gap:14px}.application+.application{border-left:0;border-top:1px solid var(--line)}.footer{font-size:12px;flex-wrap:wrap;gap:14px;padding:20px 0}.swatches{display:none}}
+
+.control-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center}@media(max-width:700px){.control-row{gap:9px}.controls button{padding:9px 14px}}
+
+:root{--selected:#202925}a:focus-visible{outline:2px solid var(--jade);outline-offset:5px}
+
+</style></head>
+<!--
+THESIS: Publish the approved Autonomy motion as a self-contained, interactive specimen.
+OWN-WORLD: v6.1 jade, ivory, cyan and mineral palette; flat center; breathing petals.
+STORY: Switch autonomous operations and model analysis, compare application sizes, pause.
+FIRST VIEWPORT: Centered 240px canvas and Autonomy name, with two explicit mode buttons.
+FORM: Preserve the approved v6 specimen layout; two standalone light and dark editions.
+-->
+<body><main><header><div class="brand">AeroSense</div><span class="edition">Autonomy · HTML Demo</span></header>
+<section class="stage" aria-label="Autonomy 标识动效"><canvas class="large-mark" data-mark="shared" width="480" height="480" role="img" aria-label="八瓣 Autonomy 动态标识"></canvas><h1 class="name">Autonomy</h1><div class="control-row"><div class="controls" aria-label="动效状态"><button data-mode="idle" aria-pressed="true">自动运维</button><button data-mode="loading" aria-pressed="false">模型分析</button></div></div></section>
+<section class="applications" aria-label="实际尺寸"><div class="application"><span class="label">系统加载</span><div class="lockup"><canvas class="cover-mark" data-mark="idle" width="104" height="104" aria-hidden="true"></canvas><span class="cover-type">AeroSense</span></div></div><div class="application"><span class="label">右上角 · 42 px</span><div class="lockup"><canvas class="small-mark" data-mark="idle" width="84" height="84" aria-hidden="true"></canvas><span>Autonomy</span></div></div><div class="application application-analysis"><span class="label">模型分析</span><div class="lockup"><canvas class="analysis-mark" data-mark="loading" width="124" height="124" aria-hidden="true"></canvas><span>Autonomy</span></div></div></section>
+<footer class="footer"><div class="swatches" aria-label="玉绿、暖银白、冷青"><i style="--swatch:#7cb59a"></i><i style="--swatch:#e8eddb"></i><i style="--swatch:#87bdc4"></i><i style="--swatch:#b5b1c9"></i></div><a href="Autonomy_light_v1.html">白色版本</a><button id="pause" class="pause" aria-pressed="false">暂停动效</button></footer></main><script>(()=>{
+  'use strict';
+  const TAU=Math.PI*2;
+  const clamp=(n,a=0,b=1)=>Math.min(b,Math.max(a,n));
+  const mix=(a,b,t)=>a.map((v,i)=>v+(b[i]-v)*t);
+  const rgb=c=>`rgb(${c.map(v=>Math.round(clamp(v,0,255))).join(',')})`;
+  const ivory=[232,237,219],jade=[124,181,154],lagoon=[135,189,196],mineral=[181,177,201];
+  function lab(c){
+    const [r,g,b]=c.map(v=>{v/=255;return v<=.04045?v/12.92:Math.pow((v+.055)/1.055,2.4);});
+    const l=Math.cbrt(.4122214708*r+.5363325363*g+.0514459929*b);
+    const m=Math.cbrt(.2119034982*r+.6806995451*g+.1073969566*b);
+    const s=Math.cbrt(.0883024619*r+.2817188376*g+.6299787005*b);
+    return [.2104542553*l+.793617785*m-.0040720468*s,1.9779984951*l-2.428592205*m+.4505937099*s,.0259040371*l+.7827717662*m-.808675766*s];
+  }
+  function fromLab([L,a,b]){
+    const l=Math.pow(L+.3963377774*a+.2158037573*b,3),m=Math.pow(L-.1055613458*a-.0638541728*b,3),s=Math.pow(L-.0894841775*a-1.291485548*b,3);
+    return [4.0767416621*l-3.3077115913*m+.2309699292*s,-1.2684380046*l+2.6097574011*m-.3413193965*s,-.0041960863*l-.7034186147*m+1.707614701*s].map(v=>255*(v<=.0031308?12.92*v:1.055*Math.pow(v,1/2.4)-.055));
+  }
+  const stops=[jade,ivory,lagoon,mineral,jade].map(lab);
+  function spectral(phase){
+    const u=((phase%1)+1)%1*(stops.length-1),i=Math.floor(u),f=u-i;
+    const eased=f*f*(3-2*f);
+    return fromLab(mix(stops[i],stops[i+1],eased));
+  }
+
+  // The v4 silhouette and timing are retained. Color and the central seed form one phase.
+  function sample(time,variant='idle',activity){
+    const active=clamp(activity??(variant==='loading'?1:0));
+    const t=Number.isFinite(time)?time:0;
+    const petals=[];
+    for(let i=0;i<8;i++){
+      const angle=-Math.PI/2+i*TAU/8;
+      const idlePhase=t*TAU/6.4-i*.69;
+      const fold=(1-Math.cos(idlePhase))/2;
+      const runningPhase=t*TAU/2.8-i*TAU/8;
+      const wave=Math.pow((1+Math.cos(runningPhase))/2,2);
+      const opening=(1-active)*fold+active*wave;
+      const radius=32+(1-active)*Math.sin(idlePhase)*.65-active*wave*.9;
+      const rotation=angle+.10+(1-active)*Math.sin(idlePhase)*.15+active*Math.sin(runningPhase)*.18;
+      const major=14.7-(1-active)*fold*2.1+active*(wave*1.7-1.2);
+      const minor=7.3+(1-active)*(fold-.5)*6.6+active*(3.2-wave*7.0);
+      const phase=t/6.4-i*.064,runningColor=t/2.8-i*.064;
+      const material=mix(spectral(phase),spectral(runningColor),active);
+      const illumination=(Math.cos(angle+2.2)+1)/2;
+      const color=mix(material,ivory,.07+illumination*.25);
+      const sheen=mix(spectral(phase+.20),spectral(runningColor+.20),active);
+      petals.push({x:64+radius*Math.cos(angle),y:64+radius*Math.sin(angle),major,minor,rotation,opening,color,sheen});
+    }
+    const phaseY=(1-active)*Math.cos(t*TAU/6.4)+active*Math.cos(t*TAU/2.8);
+    const breath=(1-phaseY)/2;
+    const center={x:64,y:64,radius:7.55+breath*.18,color:mix(mix(spectral(t/6.4+.055),spectral(t/2.8+.055),active),jade,.18)};
+    const breathScale=1-.025*Math.cos(t*TAU/(6.4+(2.8-6.4)*active));
+    return {petals,active,center,breathScale};
+  }
+
+  function draw(ctx,time,variant='idle',options={}){
+    const {petals,center,breathScale}=sample(time,variant,options.activity);
+    ctx.save();ctx.setTransform(ctx.canvas.width/128,0,0,ctx.canvas.height/128,0,0);ctx.clearRect(0,0,128,128);
+    ctx.translate(64,64);ctx.scale(breathScale,breathScale);ctx.translate(-64,-64);
+    for(const p of petals){
+      ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rotation);
+      ctx.beginPath();ctx.ellipse(.7,1.0,p.major,p.minor,0,0,TAU);
+      ctx.fillStyle=rgb(mix(p.color,[48,76,65],.47));ctx.fill();
+      const surface=ctx.createLinearGradient(-p.major,-p.minor,p.major*.8,p.minor);
+      surface.addColorStop(0,rgb(mix(p.color,ivory,.38)));
+      surface.addColorStop(.35,rgb(mix(p.color,p.sheen,.32)));
+      surface.addColorStop(.69,rgb(p.color));
+      surface.addColorStop(1,rgb(mix(p.color,[62,104,87],.24)));
+      ctx.beginPath();ctx.ellipse(0,0,p.major,p.minor,0,0,TAU);ctx.fillStyle=surface;ctx.fill();
+      ctx.beginPath();ctx.ellipse(0,0,p.major-.25,p.minor-.22,0,Math.PI*1.02,Math.PI*1.78);
+      ctx.strokeStyle=rgb(mix(p.sheen,ivory,.65));ctx.globalAlpha=.45;ctx.lineWidth=.34;ctx.stroke();ctx.restore();
+    }
+    ctx.beginPath();ctx.arc(center.x,center.y,center.radius,0,TAU);
+    ctx.fillStyle=rgb(center.color);ctx.fill();ctx.restore();
+  }
+  window.__AEROSENSE_AOM_MARK__={draw,sample,version:'Autonomy-motion-v6.1'};
+})();
+</script><script>(()=>{
+ 'use strict';
+ const renderer=window.__AEROSENSE_AOM_MARK__;
+ const reduced=matchMedia('(prefers-reduced-motion:reduce)');
+ const entries=[...document.querySelectorAll('canvas[data-mark]')].map(canvas=>({canvas,ctx:canvas.getContext('2d'),variant:canvas.dataset.mark}));
+ const modes=[...document.querySelectorAll('[data-mode]')];
+ const pause=document.querySelector('#pause');
+ let time=0,activity=0,target=0,paused=false,last=null,painted=-Infinity,raf=0;
+ function paint(){
+  for(const entry of entries)if(entry.ctx)renderer.draw(entry.ctx,reduced.matches?0:time,entry.variant,{activity:entry.variant==='shared'?activity:entry.variant==='loading'?1:0});
+ }
+ function frame(now){
+  raf=0;if(paused||document.hidden||reduced.matches){last=null;return;}
+  const delta=last===null?0:Math.max(0,Math.min(.08,(now-last)/1000));last=now;
+  time+=delta;activity+=(target-activity)*(1-Math.exp(-delta*6));
+  if(now-painted>=1000/30){painted=now;paint();}
+  raf=requestAnimationFrame(frame);
+ }
+ function reconcile(){
+  cancelAnimationFrame(raf);raf=0;last=null;painted=-Infinity;paint();
+  if(!paused&&!document.hidden&&!reduced.matches)raf=requestAnimationFrame(frame);
+ }
+ function resize(){
+  const dpr=Math.min(3,Math.max(1,window.devicePixelRatio||1));
+  for(const {canvas} of entries){const width=Math.max(1,Math.round(canvas.getBoundingClientRect().width*dpr));if(canvas.width!==width){canvas.width=width;canvas.height=width;}}
+  paint();
+ }
+ modes.forEach(button=>button.addEventListener('click',()=>{
+  target=button.dataset.mode==='loading'?1:0;
+  if(reduced.matches||paused)activity=target;
+  modes.forEach(item=>item.setAttribute('aria-pressed',String(item===button)));paint();
+ }));
+ pause.addEventListener('click',()=>{
+  paused=!paused;pause.textContent=paused?'播放动效':'暂停动效';pause.setAttribute('aria-pressed',String(paused));reconcile();
+ });
+ document.addEventListener('visibilitychange',reconcile);
+ reduced.addEventListener('change',()=>{if(reduced.matches)activity=target;reconcile();});
+ window.addEventListener('resize',resize);
+ window.addEventListener('pagehide',()=>{cancelAnimationFrame(raf);raf=0;last=null;});
+ window.addEventListener('pageshow',reconcile);
+ window.__AUTONOMY_DEMO__={state:()=>({time,activity,target,paused,running:raf!==0,theme:document.documentElement.dataset.theme})};
+ resize();reconcile();
+})();</script></body></html>

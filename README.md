@@ -12,6 +12,7 @@
 </p>
 <p align="center"><strong>Digital Twin · Precision Cultivation · Autonomous Operations</strong></p>
 <p align="center">云雾工厂项目团队</p>
+<p align="center">HTML演示：<a href="demos/Autonomy_light_v1.html">白色版</a> · <a href="demos/Autonomy_dark_v1.html">暗色版</a><br>下载后直接打开，可切换自动运维与模型分析。</p>
 
 # AeroSense
 
