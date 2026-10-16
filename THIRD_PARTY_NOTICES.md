@@ -1,6 +1,6 @@
 # 第三方组件许可
 
-LateBlightProj.的授权条款适用于其拥有权利的代码和素材。以下组件保留原作者及原许可，
+Lateblight proj.的授权条款适用于其拥有权利的代码和素材。以下组件保留原作者及原许可，
 不受该条款追加限制。编译输出中的原许可证注释予以保留。
 
 | 组件 | 版本 | 许可 | 许可正文 |
@@ -10,4 +10,4 @@ LateBlightProj.的授权条款适用于其拥有权利的代码和素材。以�
 | esbuild（构建工具） | 0.25.12 | MIT | [LICENSE](third-party/esbuild/LICENSE) |
 | TypeScript（构建工具） | 5.9.2 | Apache-2.0 | [LICENSE](third-party/typescript/LICENSE) |
 
-依赖以package-lock.json为准。项目Logo和LateBlightProj.自有视觉素材遵循根目录LICENSE。
+依赖以package-lock.json为准。项目Logo和Lateblight proj.自有视觉素材遵循根目录LICENSE。

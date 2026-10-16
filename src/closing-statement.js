@@ -10,16 +10,16 @@
    <div class="rank-authorship-brand">
     <div class="rank-authorship-logo"><svg class="rank-authorship-wordmark" role="img" aria-label="AeroSense" viewBox="45 106 1995 403" width="1995" height="403" preserveAspectRatio="xMidYMid meet" hidden><image width="2109" height="746"></image></svg><strong class="rank-authorship-fallback">AeroSense</strong></div>
     <div class="rank-authorship-logo"><div class="rank-authorship-agent"><span class="rank-authorship-agent-icon"><canvas width="256" height="256" aria-hidden="true"></canvas></span><span class="rank-authorship-autonomy">Autonomy</span></div></div>
-    <div class="rank-authorship-logo"><svg class="rank-authorship-emblem" role="img" aria-label="LateBlightProj.项目Logo" preserveAspectRatio="xMidYMid meet"><image></image></svg></div>
+    <div class="rank-authorship-logo"><svg class="rank-authorship-emblem" role="img" aria-label="Lateblight proj.项目Logo" preserveAspectRatio="xMidYMid meet"><image></image></svg></div>
    </div>
    <span class="rank-authorship-version"></span>
   </header>
   <div class="rank-authorship-content">
    <h2 id="rankAuthorshipTitle">系统版权声明</h2>
-   <p class="rank-authorship-lead"><span>AeroSense源码、界面与配套资产</span><span>版权归GitHub账号<strong>LateBlightProj.</strong>所有。</span></p>
+   <p class="rank-authorship-lead"><span>AeroSense源码、界面与配套资产</span><span>版权归GitHub账号<strong>Lateblight proj.</strong>所有。</span></p>
   </div>
   <footer class="rank-authorship-foot">
-   <div>© 2026 LateBlightProj.</div>
+   <div>© 2026 Lateblight proj.</div>
    <a class="rank-authorship-source" href="https://github.com/LateBlightProj/AeroSense" target="_blank" rel="noopener noreferrer">github.com/LateBlightProj/AeroSense</a>
    <div class="rank-authorship-rights">源码、Logo、图像与三维模型 · 使用及转载须授权</div>
   </footer>
