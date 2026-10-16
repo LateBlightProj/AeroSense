@@ -1,6 +1,6 @@
 {
   "systemVersion": "5.18",
-  "sourcePublicationRevision": 4,
+  "sourcePublicationRevision": 5,
   "productionFileSha256": "9dbad2893d163df074e82365241260271eff4c437dbebd057ec0a2c996b9aaae",
   "templateSha256": "b0b723bd42ac894842aeddb742121b0516593e2d96c9fd87aaef598a95be26c5",
   "sourceBasis": "AeroSense v5.18",
@@ -40,5 +40,5 @@
     "journal": "SQLite",
     "ui": "HTTP/SSE operations console"
   },
-  "copyrightHolder": "LateBlightProj"
+  "copyrightHolder": "LateBlightProj."
 }
