@@ -39,7 +39,7 @@ GitHub Actions执行设备协议与控制逻辑测试，每次运行关联源码
 授权范围涵盖Lateblight proj.自有的源码、界面设计、AeroSense与Autonomy标识、项目Logo、
 图像、材质贴图、三维模型、动画、音效和文档。
 
-使用或转载上述内容，须经 Lateblight proj. 书面授权。
+使用或转载上述内容，须经授权。
 
 完整条款见[LICENSE](LICENSE)。GitHub平台许可及适用法律允许的行为依各自规定，
 第三方组件遵循其原有许可证。
