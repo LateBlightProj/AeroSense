@@ -11,11 +11,11 @@
   </picture>
 </p>
 <p align="center"><strong>Digital Twin · Precision Cultivation · Autonomous Operations</strong></p>
-<p align="center">云雾工厂项目团队</p>
+<p align="center">LateBlightProj</p>
 
 # AeroSense
 
-**源码与资产公开供查看。使用、转载或分发须取得云雾工厂项目团队书面授权。**
+**源码与资产公开供查看。使用、转载或分发须取得LateBlightProj书面授权。**
 
 AeroSense连接雾培生产的关键环节：从健康种源、环境感知与精准调控，
 到品质校验、采收分选与批次交付。数字孪生呈现设备结构和生产过程，
@@ -34,17 +34,17 @@ GitHub Actions执行设备协议与控制逻辑测试，每次运行关联源码
 
 ## 权利与授权
 
-**保留所有权利。**
+**Copyright © 2026 LateBlightProj。保留所有权利。**
 
-授权范围涵盖团队自有的源码、界面设计、AeroSense与Autonomy标识、团队Logo、
+授权范围涵盖LateBlightProj自有的源码、界面设计、AeroSense与Autonomy标识、项目Logo、
 图像、材质贴图、三维模型、动画、音效和文档。无论整体使用还是单独提取，
-商业或非商业的运行、部署、修改、二次开发、复制、转载和分发，均须事先取得团队书面授权。
+商业或非商业的运行、部署、修改、二次开发、复制、转载和分发，均须事先取得LateBlightProj书面授权。
 
 完整条款见[LICENSE](LICENSE)。GitHub平台许可及适用法律允许的行为依各自规定，
 第三方组件遵循其原有许可证。
 
-授权申请请通过本仓库Issue联系团队，说明申请主体、使用目的、内容范围、方式与期限。
-团队将根据具体需求明确授权范围。
+授权申请请通过本仓库Issue联系LateBlightProj，说明申请主体、使用目的、内容范围、方式与期限。
+LateBlightProj将根据具体需求明确授权范围。
 
 ## 系统构成
 
@@ -92,9 +92,9 @@ python -m control.server --config control/config.local.json
 
 ## 署名
 
-云雾工厂项目团队 · AeroSense / AeroSense Autonomy
+LateBlightProj · AeroSense / AeroSense Autonomy
 
 **Source and assets available for viewing. All rights reserved.**
-Prior written permission is required to use, modify, republish or redistribute the team's
+Prior written permission is required to use, modify, republish or redistribute LateBlightProj's
 code, logos, images, textures, 3D models, animations and other assets, subject to applicable law
 and GitHub's Terms of Service. See [LICENSE](LICENSE).
